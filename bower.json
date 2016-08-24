@@ -8,7 +8,7 @@
   "description": "",
   "main": "src/angular-awezoom.js",
   "dependencies": {
-    "awezoom": "0.2.0"
+    "awezoom": "~0.2.0"
   },
   "keywords": [
     "zoom",

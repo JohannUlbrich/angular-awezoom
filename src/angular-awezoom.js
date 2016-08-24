@@ -1,28 +1,11 @@
-/**
- * 
- */
-
-(function(root, factory) {
-    // AMD
-    if (typeof define === 'function' && define.amd) {
-        define([], factory);
-
-    // Node
-    } else if (typeof module === 'object' && module.exports) {
-        module.exports = factory();
-
-    // Browser globals
-    } else {
-        root.Awezoom = factory();
-    }
-}(this, function() {
+(function(window, angular, Awezoom) {
     'use strict';
 
-    var angularAwezoom = angular.module('angular-awezoom');
+    var angularAwezoom = angular.module('angular-awezoom', []);
 
     angularAwezoom.directive('awezoom', [
         'awezoomService',
-        function awezoom(awezoomService) {
+        function awezoomDirective(awezoomService) {
             return {
                 restrict: 'E',
                 transclude: true,
@@ -55,7 +38,7 @@
     ]);
 
     angularAwezoom.factory('awezoomService', [
-        function() {
+        function awezoomService() {
             var awezoomInstances = {};
 
             return {
@@ -79,7 +62,4 @@
             };
         }
     ]);
-
-    return angularAwezoom;
-
-}));
+}(window, angular, Awezoom));
