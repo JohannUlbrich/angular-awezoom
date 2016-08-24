@@ -1,7 +1,7 @@
 {
   "name": "angular-awezoom",
   "description": "Another CSS3 transition zooming library with the benefit of native scrollbars, focal points and adjustable content alignment.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "authors": [
     "Johann Ulbrich <info@johann-ulbrich.de>"
   ],
