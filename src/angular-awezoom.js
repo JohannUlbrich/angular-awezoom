@@ -30,7 +30,7 @@
 
                     // clean up
                     scope.$on('$destroy', function() {
-                        awezoomService.removeInstance(myAwezoomInstance);
+                        awezoomService.removeInstance(ctrl.instanceId);
                     });
                 }
             };
